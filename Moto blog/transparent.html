@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descripion" content="This is a car bloging website.Gt information any cars.">
+    <meta name="author" content="Gourab Chakraborty">
+    <meta name="keywords" content="Cars blog,Car website,Bike blog,Bike website,Bikes,Cars">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="logo.png">
+    <title>MotoBlog</title>
+    <style>
+        *{
+            font-family: 'Kalam', cursive;
+            margin: 0;
+            padding: 0;
+           
+        }
+        body{
+            background-image: linear-gradient(lightgrey,white,grey);
+        }
+        
+        ul{
+            display: flex;
+            flex-direction: row;
+            border: 2px black solid;
+            background-image: linear-gradient(lightblue,lightyellow);
+        }
+        
+       a{color: rgb(79, 79, 177);
+            padding: 20px 25px ;
+            text-decoration: none;
+        }
+       ul,li{
+            list-style-type: none;
+            font-size: 15px;
+            font-weight: bolder;
+
+        }
+        a:hover{
+            
+            background-color: lightblue;
+        }
+
+        #search{
+            text-align:end;
+            position: relative;
+            top: -65px;
+            left:1410px;
+            width: 200px;
+            border-radius: 20px;
+            border: solid 2px rgb(0, 0, 0);
+            outline: none;
+            width: 100px;
+            height: 40px;
+            
+            
+        
+            
+           
+            }
+            #search_icon{
+                text-align: end;
+                position: absolute;
+                top: 8px;
+                left: 1470px;
+                cursor: pointer;
+                z-index: 2;
+            }
+            #search_icon:hover{
+                transform: scale(0.8);
+            }
+            
+           
+        .product{
+                padding: 30px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin: 20px;
+                display:flex;
+                flex-direction: column;
+                
+                }
+
+        .product_top p{
+                text-shadow: 10px 10px 10px;
+                font-size: xx-large;
+                font-weight: bolder;
+            }
+        .product img{
+                border: 2px  solid;
+                box-shadow: 10px 10px 10px;
+            }
+        hr{
+                padding-bottom: 5px;
+                width: 800px;
+          }
+                .info{
+                    display: inline-block;
+                    position: absolute;
+                    top: 283px;
+                    left: 631px;
+
+                    width: 900px;
+                    
+                    }
+                    .product_middle{
+                        margin-top: 150px;
+                    }
+                    button{
+                        padding: 10px;
+                    }
+                    .head_class{
+                        font-size: 25px;
+                        font-weight: bolder;
+                        
+
+                    }
+                    .product_down img{
+                        height: 600px;
+                        width: 900px;
+                        border: 2px solid ;
+                        border-radius: 20px;
+                    }
+                    #black{
+                        box-shadow:30px 30px 30px gray;
+                    }
+                    #green{
+                        box-shadow:30px 30px 30px grey;
+                    }
+                    #white{
+                        box-shadow:30px 30px 30px grey;
+                    }
+                    #bg{
+                        position: absolute;
+                        z-index: -1;
+                        height: 611px;
+                        width: 100%;
+                        opacity:0.34;
+                        border-bottom: 3px solid;
+                        }
+                        
+    
+
+
+.comment{
+    border: 3px solid;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 200px;
+    box-sizing: border-box;
+}
+input{
+    padding: 5px;
+    width: 200px;
+    margin: 8px;
+    
+}
+.comment button{
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+.comment h3{
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder;
+}
+h1{
+    text-shadow: 5px 5px 5px;
+}
+h2{
+    text-shadow: 10px 10px 10px;
+}
+#ex{
+    height: 400px;
+    position: absolute;
+    left: 700px;
+}
+.price_main{
+  margin: 50px;
+  
+   
+}
+.price{
+    padding: 15px;
+    font-weight: bolder;
+    box-sizing: border-box;
+}
+.price1{
+    padding: 15px;
+    width: 200px;
+    font-weight: bolder;
+    background-color: rgb(255, 38, 38);
+}
+.price:hover{
+    background-color: orangered;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.price1:hover{
+    background-color: orangered;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+
+                    
+                    
+
+    </style>
+</head>
+<body>
+   
+       <nav class="nav">
+           <ul>
+            <a href="#">
+                <li>HOME</li>
+            </a>
+            <a href="#">
+                <li>LOGIN</li>
+            </a>
+            <a href="#">
+                <li>REGISTER</li>
+            </a>
+            <a href="mailto:chakrabortygourab38@gmial.com">
+                <li>CONTACT US</li>
+            </a>
+           
+           </ul>
+           <img src="search.png" alt="search" height="40px" id="search_icon" onclick="search()">
+           <input type="search"  id="search" >
+       </nav>
+       <img src="bg.png" alt="" id="bg">
+    <div class="product" >
+        
+       
+       <div class="product_top"><p>Tata Harrier<hr></p>
+        
+       <img src="car.jpg" alt="Tata Hariier Pic" height="400px">
+       <div class="info"><h3>The Tata Harrier has 1 Diesel Engine on offer. The Diesel engine is 1956 cc . It is available with the Manual & Automatic transmission. Depending upon the variant and fuel type the Harrier has a mileage of 17.0 kmpl. The Harrier is a 5 seater and has length of 4598 mm, width of 1894 mm and a wheelbase of 2741 mm.</h3>
+        <div class="price_main"></div>
+<button class="price1">See On-Road Price</button>
+<button class="price">See price at Your Location</button>
+    </div>
+       </div>
+       
+
+    <div class="product_middle">
+
+        <div class="features"><p class="head"><h1>Key Feathers of Tata Harrier</h1><hr></p>
+
+        <button onclick="hide1()"id="btn1" >+</button><p id="head_id1" class="head_class">Performance and Fuel Economy</p><p id="des_id1" 
+
+        class="des_class">Mileage(ARAI) :  17 Kmpl</p><br><br><br>
+
+
+
+        <button onclick="hide2()" id="btn2">+</button><p id="head_id2" class="head_class">Brakes, Steering ,Suspension and Tyres</p><p id="des_id2" class="des_class">Suspension Front:
+            Independent Lower Wishbone McPherson Strut With Coil Spring & Anti Roll Bar<br>
+            Suspension Rear:Semi Independent Twist Blade with Panhard rod coil spring<br>
+            Brakes Front:Disc<br>
+            Brakes Rear:Drum<br>
+            Steering Type:Power<br>
+            Tyre Size:235/65 R17<br>
+            Alloy Wheel Size:R17<br>
+            Tyre Type:Tubeless<br>
+        </p><br><br><br>
+
+
+        <button onclick="hide3()" id="btn3">+</button><p id="head_id3" class="head_class">Interior Dimensions</p>
+        <p id="des_id3" class="des_class">Seating Capacity:5<br>
+            Doors:5<br>
+            Boot Space:425 Liters<br>
+            Fuel Capacity:50 Liters<br>
+        </p><br><br><br>
+
+
+        <button onclick="hide4()" id="btn4">+</button><p id="head_id4" class="head_class">Interiors</p>
+        <img src="in.jpg" alt=""><br><br><br>
+        <p id="des_id4" class="des_class">Dual Tone Dashboard:Yes<br>
+            Additional Interior Features:Signature Oak Brown Interior Colour Scheme, Premium Benecke-KalikoTM Oak Brown Perforated, Leather Seat Upholstery & Door Pad Inserts, Instrument Cluster with 17.76 cm (7") Colour TFT Display<br>
+            Leather Seats:Yes<br>
+            Rear Seat Headrest:Yes<br>
+            Fabric Upholstery:No<br>
+            Ventilated Seats:Not Available in Harrier</p><br><br><br>
+
+
+        <button onclick="hide5()" id="btn5">+</button><p id="head_id5" class="head_class" >Comfort and Convenience</p>
+        <p id="des_id5" class="des_class">Smart Entry:Yes<br>
+            AC:Yes<br>
+            Rear AC Ducts:Yes<br>
+            Heater:Yes<br>
+            Power Steering:Yes<br>
+            Steering Column:Tilt & Telescopic<br>
+            Steering Mounted Audio Control:Yes<br>
+        </p><br><br><br>
+
+
+        <button onclick="hide6()" id="btn6">+</button><p id="head_id6" class="head_class" >Safety and Security</p>
+        <p id="des_id6" class="des_class">Hill Descent Control:Yes<br>
+            Speed Sensing Auto Door Lock:Yes<br>
+            ISOFIX Child Seat Mounts:Yes<br>
+            Hill Assist:Yes<br>
+            Airbags:Driver, Passenger and Side Front<br>
+            Seat Belts:Yes<br>
+            Anti-lock Braking System (ABS):Yes<br>
+        </p><br><br><br>
+
+
+        <button onclick="hide7()" id="btn7">+</button><p id="head_id7" class="head_class">Exterior Dimensions</p>
+        <img src="ex.png" alt="" id="ex"><bR><br><br>
+        <p id="des_id7" class="des_class">Length*Width*Height:4598*1894*1706 mm^3<br>
+            Wheelbase:2741 mm<br>
+            Ground Clearance (Unladen):205 mm<br>
+        </p><br><br><br>
+
+
+        <button onclick="hide8()" id="btn8">+</button><p id="head_id8" class="head_class">Exterior / Appearence</p>
+        <p id="des_id8" class="des_class">Lighting:DRL's (Day Time Running Lights),Projector Headlights,LED Tail lamps<br>
+            Additional Exterior Features:Dual Function LED DRLs with Turn Indicators<br>
+            Alloy Wheels: Yes<br>
+            Trunk Opener:Remote<br>
+            Outside Rear View Mirror:Yes<br>
+            </p><br><br><br>
+        </div>
+        
+        
+    </div>
+    <div class="product_down">
+        <h1>All Colors Available</h1><br><br>
+        <div class="color1">
+            <h2>ORCUS WHITE</h2>
+            <img src="color1.jpg" alt="" id="white"><br><br><br><br>
+        </div>
+        <div class="color2">
+            <h2>ATLAS BLACK</h2>
+            <img src="color2.jpg" alt="pic" id="black"><br><br><br><br>
+        </div>
+        <div class="color3">
+            <h2>SPARKLE COCOA</h2>
+            <img src="color3.jpg" alt="pic" id="green"><br><br><br><br>
+        </div>
+    </div>
+    <form method="POST">
+        <div class="comment">
+            <h3>Login Here</h3>
+            <div class="name">Name:<input type="text" placeholder="Enter you Name"></div>
+            <div class="email">Email:<input type="email" placeholder="Enter your Email"></div>
+           <div class="password">Password:<input type="password" placeholder="Enter your Password"></div>
+            <button>Submit</button>
+            </div>
+            </form>
+           
+        </div>
+        
+    </div>
+    <script>
+        function hide1(){
+            let btn1 = document.getElementById('btn1');
+            let des_id1 =document.getElementById('des_id1');
+            
+            if (des_id1.style.display !='none') {
+                des_id1.style.display='none'
+                
+            }
+             else {des_id1.style.display='block'}
+
+            
+        }
+
+
+        function hide2(){
+            let btn2 = document.getElementById('btn2');
+            let des_id2 =document.getElementById('des_id2');
+            
+            if (des_id2.style.display !='none') {
+                des_id2.style.display='none'
+                
+            }
+             else {des_id2.style.display='block'}
+        }
+
+
+        function hide3(){
+            let btn3 = document.getElementById('btn3');
+            let des_id3 =document.getElementById('des_id3');
+            
+            if (des_id3.style.display !='none') {
+                des_id3.style.display='none'
+                
+            }
+             else {des_id3.style.display='block'}
+        }
+
+
+        function hide4(){
+            let btn4 = document.getElementById('btn4');
+            let des_id4 =document.getElementById('des_id4');
+            
+            if (des_id4.style.display !='none') {
+                des_id4.style.display='none'
+                
+            }
+             else {des_id4.style.display='block'}
+        }
+
+
+        function hide5(){
+            let btn5 = document.getElementById('btn5');
+            let des_id5 =document.getElementById('des_id5');
+            
+            if (des_id5.style.display !='none') {
+                des_id5.style.display='none'
+                
+            }
+             else {des_id5.style.display='block'}
+        }
+
+
+        function hide6(){
+            let btn6 = document.getElementById('btn6');
+            let des_id6 =document.getElementById('des_id6');
+            
+            if (des_id6.style.display !='none') {
+                des_id6.style.display='none'
+                
+            }
+             else {des_id6.style.display='block'}
+        }
+
+
+        function hide7(){
+            let btn7 = document.getElementById('btn7');
+            let des_id7 =document.getElementById('des_id7');
+            
+            if (des_id7.style.display !='none') {
+                des_id7.style.display='none'
+                
+            }
+             else {des_id7.style.display='block'}
+        }
+
+
+        
+
+        function hide8(){
+            let btn1 = document.getElementById('btn8');
+            let des_id8 =document.getElementById('des_id8');
+            
+            if (des_id8.style.display !='none') {
+                des_id8.style.display='none'
+                
+            }
+             else {des_id8.style.display='block'}
+
+        }
+
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>
